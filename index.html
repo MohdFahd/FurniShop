@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurniShop - Creative Home Furniture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body cz-shortcut-listen="true" style="user-select: auto; cursor: auto">
+    <div id="app">
+      <div class="bg-white flex flex-col items-center w-full">
+        <div class="bg-white w-full">
+          <section
+            class="relative w-full h-[100vh] min-h-[600px] max-h-[1000px] overflow-hidden"
+          >
+            <div class="relative h-full">
+              <div class="absolute w-full h-full top-0 left-0">
+                <div class="relative h-screen">
+                  <img
+                    class="absolute w-full h-screen top-0 left-0 object-cover"
+                    alt="Modern living room"
+                    src="./assets/imgs/modern-living-room-interior-2021-09-02-08-41-17-utc-1.png"
+                  />
+                  <div
+                    class="absolute w-full h-[5%] bottom-0 left-0 [background:linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.6)_40%,rgba(255,255,255,1)_80%)]"
+                  ></div>
+                </div>
+              </div>
+              <header
+                class="absolute top-4 md:top-11 left-0 w-full flex justify-between items-center px-4 md:px-[130px] z-50"
+              >
+                <h1
+                  class="[font-family:'Saira',Helvetica] font-bold text-white text-2xl md:text-4xl bounce-in"
+                  style="animation-delay: 0.1s; animation-fill-mode: both"
+                >
+                  FurniShop
+                </h1>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-16">
+                  <a
+                    href="#"
+                    class="nav-link [font-family:'Saira',Helvetica] text-white text-base font-semibold"
+                    >Home</a
+                  ><a
+                    href="#about"
+                    class="nav-link [font-family:'Saira',Helvetica] text-white text-base font-normal"
+                    >About</a
+                  ><a
+                    href="#products"
+                    class="nav-link [font-family:'Saira',Helvetica] text-white text-base font-normal"
+                    >Products</a
+                  ><a
+                    href="#contact"
+                    class="nav-link [font-family:'Saira',Helvetica] text-white text-base font-normal"
+                    >Contact</a
+                  >
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="hamburger md:hidden" onclick="toggleMobileMenu()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div
+                  id="mobileMenu"
+                  class="mobile-menu fixed top-0 right-0 w-64 h-full bg-[#286f6c] z-40 md:hidden"
+                >
+                  <div class="flex flex-col p-8 mt-16">
+                    <a
+                      href="#"
+                      class="nav-link [font-family:'Saira',Helvetica] text-white text-lg font-semibold mb-6"
+                      onclick="toggleMobileMenu()"
+                      >Home</a
+                    ><a
+                      href="#about"
+                      class="nav-link [font-family:'Saira',Helvetica] text-white text-lg font-normal mb-6"
+                      onclick="toggleMobileMenu()"
+                      >About</a
+                    ><a
+                      href="#products"
+                      class="nav-link [font-family:'Saira',Helvetica] text-white text-lg font-normal mb-6"
+                      onclick="toggleMobileMenu()"
+                      >Products</a
+                    ><a
+                      href="#contact"
+                      class="nav-link [font-family:'Saira',Helvetica] text-white text-lg font-normal mb-6"
+                      onclick="toggleMobileMenu()"
+                      >Contact</a
+                    >
+                  </div>
+                </div>
+              </header>
+              <div
+                class="flex flex-col items-center absolute top-16 sm:top-20 md:top-32 left-0 w-full px-4 sm:px-6"
+              >
+                <h2
+                  class="w-full max-w-[888px] hero-text [font-family:'Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-5xl lg:text-[64px] text-center tracking-[0] leading-[1.1] sm:leading-[1.2] md:leading-[76.8px] bounce-in"
+                  style="animation-delay: 0.2s; animation-fill-mode: both"
+                >
+                  Creative Home Simplify Your Furniture
+                </h2>
+                <p
+                  class="w-full max-w-[627px] mt-6 sm:mt-8 md:mt-[72px] bounce-in [font-family:'Saira',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl text-center tracking-[0.20px] leading-[1.4] sm:leading-[1.5] md:leading-[30px] px-2"
+                  style="animation-delay: 0.4s; animation-fill-mode: both"
+                >
+                  Transform your living space with our carefully curated
+                  collection of modern furniture pieces designed for
+                  contemporary homes.
+                </p>
+                <button
+                  class="btn-hover inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow h-12 sm:h-14 md:h-16 mt-4 sm:mt-6 md:mt-[36px] px-6 sm:px-8 md:px-20 py-3 sm:py-4 bg-[#e2e2e266] rounded-[10px] backdrop-blur-[15px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(15px)_brightness(100%)] hover:bg-[#e2e2e280] bounce-in"
+                  style="animation-delay: 0.6s; animation-fill-mode: both"
+                >
+                  <span
+                    class="[font-family:'Saira',Helvetica] font-semibold text-white text-base sm:text-lg md:text-xl text-center tracking-[0.20px] leading-[30px] whitespace-nowrap"
+                    >Shop Now</span
+                  >
+                </button>
+              </div>
+              <div
+                class="floating-element bounce-in absolute w-9 h-9 top-[557px] left-[209px] bg-[#d9d9d933] rounded-[18px] border-[0.5px] border-solid border-[#d9d9d9] backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] hidden md:block"
+                style="animation-delay: 0.8s; animation-fill-mode: both"
+              >
+                <div
+                  class="relative w-2.5 h-2.5 top-3 left-3 bg-[#d9d9d9] rounded-[5px]"
+                ></div>
+              </div>
+              <div
+                class="floating-element bounce-in absolute w-9 h-9 top-[266px] left-[28px] bg-[#d9d9d933] rounded-[18px] border-[0.5px] border-solid border-[#d9d9d9] backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] hidden md:block"
+                style="animation-delay: 1s; animation-fill-mode: both"
+              >
+                <div
+                  class="relative w-2.5 h-2.5 top-3 left-3 bg-[#d9d9d9] rounded-[5px]"
+                ></div>
+              </div>
+              <div
+                class="floating-element absolute w-9 h-9 top-[657px] left-[1244px] bg-[#d9d9d933] rounded-[18px] border-[0.5px] border-solid border-[#d9d9d9] backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] hidden lg:block"
+                style="animation-delay: 2s"
+              >
+                <div
+                  class="relative w-2.5 h-2.5 top-3 left-3 bg-[#d9d9d9] rounded-[5px]"
+                ></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stats Section -->
+          <section class="w-full py-8 sm:py-12 md:py-16 bg-white">
+            <div class="w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+              <div
+                class="bg-[#286f6c] rounded-[15px] sm:rounded-[20px] shadow-lg bounce-in"
+                style="animation-delay: 1s; animation-fill-mode: both"
+              >
+                <div
+                  class="p-6 sm:p-8 md:p-10 h-full flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6"
+                >
+                  <div
+                    class="flex flex-col items-center gap-2 px-2 sm:px-4 md:px-8 lg:px-16 py-2 sm:py-4 md:py-0 flex-1"
+                  >
+                    <div
+                      class="[font-family:'Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-[40px] text-center tracking-[0] leading-tight whitespace-nowrap"
+                    >
+                      7
+                    </div>
+                    <div
+                      class="w-full [font-family:'Saira',Helvetica] font-normal text-white text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-[0.20px] leading-tight"
+                    >
+                      Year Experience
+                    </div>
+                  </div>
+                  <div
+                    data-orientation="vertical"
+                    role="none"
+                    class="hidden sm:block shrink-0 w-[1px] h-[60px] md:h-[100px] bg-white/20"
+                  ></div>
+                  <div
+                    data-orientation="horizontal"
+                    role="none"
+                    class="block sm:hidden shrink-0 h-[1px] w-full bg-white/20 my-1"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center gap-2 px-2 sm:px-4 md:px-8 lg:px-16 py-2 sm:py-4 md:py-0 flex-1"
+                  >
+                    <div
+                      class="[font-family:'Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-[40px] text-center tracking-[0] leading-tight whitespace-nowrap"
+                    >
+                      2
+                    </div>
+                    <div
+                      class="w-full [font-family:'Saira',Helvetica] font-normal text-white text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-[0.20px] leading-tight"
+                    >
+                      Opened in the country
+                    </div>
+                  </div>
+                  <div
+                    data-orientation="vertical"
+                    role="none"
+                    class="hidden sm:block shrink-0 w-[1px] h-[60px] md:h-[100px] bg-white/20"
+                  ></div>
+                  <div
+                    data-orientation="horizontal"
+                    role="none"
+                    class="block sm:hidden shrink-0 h-[1px] w-full bg-white/20 my-1"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center gap-2 px-2 sm:px-4 md:px-8 lg:px-16 py-2 sm:py-4 md:py-0 flex-1"
+                  >
+                    <div
+                      class="[font-family:'Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-[40px] text-center tracking-[0] leading-tight whitespace-nowrap"
+                    >
+                      10k+
+                    </div>
+                    <div
+                      class="w-full [font-family:'Saira',Helvetica] font-normal text-white text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-[0.20px] leading-tight"
+                    >
+                      Furniture sold
+                    </div>
+                  </div>
+                  <div
+                    data-orientation="vertical"
+                    role="none"
+                    class="hidden sm:block shrink-0 w-[1px] h-[60px] md:h-[100px] bg-white/20"
+                  ></div>
+                  <div
+                    data-orientation="horizontal"
+                    role="none"
+                    class="block sm:hidden shrink-0 h-[1px] w-full bg-white/20 my-1"
+                  ></div>
+                  <div
+                    class="flex flex-col items-center gap-2 px-2 sm:px-4 md:px-8 lg:px-16 py-2 sm:py-4 md:py-0 flex-1"
+                  >
+                    <div
+                      class="[font-family:'Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-[40px] text-center tracking-[0] leading-tight whitespace-nowrap"
+                    >
+                      260+
+                    </div>
+                    <div
+                      class="w-full [font-family:'Saira',Helvetica] font-normal text-white text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-[0.20px] leading-tight"
+                    >
+                      Variant Furniture
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about" class="w-full py-12 sm:py-16 md:py-20 bg-white">
+            <div
+              class="w-full max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+            >
+              <div class="w-full lg:w-1/2 slide-up">
+                <img
+                  class="w-full max-w-[554px] h-auto mx-auto scale-hover rounded-lg object-cover"
+                  alt="Insert image here"
+                  src="./assets/imgs/insert-image-here.png"
+                />
+              </div>
+              <div class="w-full lg:w-1/2 space-y-4 sm:space-y-6 md:space-y-8">
+                <h2
+                  class="slide-down font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl md:text-4xl leading-[1.3] md:leading-[52px]"
+                >
+                  We Create Your Home More Aesthetic
+                </h2>
+                <p
+                  class="slide-up font-['Saira',Helvetica] font-normal text-[#23262f] text-lg md:text-xl leading-[1.6] md:leading-[34px]"
+                  style="animation-delay: 0.3s; animation-fill-mode: both"
+                >
+                  Furniture power is a software as services for multipurpose
+                  business management system,
+                </p>
+                <div class="space-y-6">
+                  <div
+                    class="scale-hover rounded-xl border bg-card text-card-foreground border-none shadow-lg p-4 fade-in"
+                    style="animation-delay: 0.6s; animation-fill-mode: both"
+                  >
+                    <div class="p-0">
+                      <div class="flex items-start gap-3">
+                        <div
+                          class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#286f6c] to-[#34877f] flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-check w-5 h-5 text-white"
+                          >
+                            <path d="M20 6 9 17l-5-5"></path>
+                          </svg>
+                        </div>
+                        <div class="space-y-2">
+                          <h3
+                            class="font-['Saira',Helvetica] font-semibold text-[#23262f] text-lg md:text-xl leading-7"
+                          >
+                            Valuation Services
+                          </h3>
+                          <p
+                            class="font-['Saira',Helvetica] font-normal text-[#23262f] text-sm md:text-base leading-7"
+                          >
+                            Sometimes features require a short description. This
+                            can be detailed description
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="scale-hover rounded-xl border bg-card text-card-foreground border-none shadow-lg p-4 fade-in"
+                    style="animation-delay: 0.9s; animation-fill-mode: both"
+                  >
+                    <div class="p-0">
+                      <div class="flex items-start gap-3">
+                        <div
+                          class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#286f6c] to-[#34877f] flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-check w-5 h-5 text-white"
+                          >
+                            <path d="M20 6 9 17l-5-5"></path>
+                          </svg>
+                        </div>
+                        <div class="space-y-2">
+                          <h3
+                            class="font-['Saira',Helvetica] font-semibold text-[#23262f] text-lg md:text-xl leading-7"
+                          >
+                            Development of Furniture Models
+                          </h3>
+                          <p
+                            class="font-['Saira',Helvetica] font-normal text-[#23262f] text-sm md:text-base leading-7"
+                          >
+                            Sometimes features require a short description. This
+                            can be detailed description
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="w-full py-12 sm:py-16 md:py-20 bg-white">
+            <div class="w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+              <div
+                class="flex flex-col mb-8 sm:mb-10 md:mb-12 text-center md:text-left"
+              >
+                <h2
+                  class="slide-down font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl sm:text-3xl md:text-[40px] leading-[1.2] sm:leading-[1.3] md:leading-[52px] mb-4"
+                >
+                  New In Store Now
+                </h2>
+                <p
+                  class="slide-up font-['Saira',Helvetica] font-normal text-[#23262f] text-sm sm:text-base md:text-lg tracking-[0.16px] leading-relaxed mb-6 sm:mb-8"
+                  style="animation-delay: 0.3s; animation-fill-mode: both"
+                >
+                  Get the latest items immediately with promo prices
+                </p>
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-8 sm:mb-10"
+              >
+                <div
+                  class="product-card rounded-xl border bg-card text-card-foreground shadow-lg h-[300px] md:h-[400px] relative overflow-hidden cursor-pointer"
+                >
+                  <div class="p-0 h-full">
+                    <div
+                      class="product-image w-full h-full bg-cover bg-center"
+                      style="
+                        background-image: url('./assets/imgs/lui-peng-8nxtrv6i4wq-unsplash.png');
+                      "
+                    >
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100"
+                      ></div>
+                      <div
+                        class="absolute bottom-[22px] left-0 right-0 text-center transition-transform duration-300"
+                      >
+                        <span
+                          class="font-['Saira',Helvetica] font-semibold text-white text-xl md:text-[28px] tracking-[0.28px] leading-[44.8px] drop-shadow-lg"
+                          >Chair</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="product-card rounded-xl border bg-card text-card-foreground shadow-lg h-[300px] md:h-[400px] relative overflow-hidden cursor-pointer"
+                >
+                  <div class="p-0 h-full">
+                    <div
+                      class="product-image w-full h-full bg-cover bg-center"
+                      style="
+                        background-image: url('./assets/imgs/erik-mclean-ij9nighki6k-unsplash.png');
+                      "
+                    >
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100"
+                      ></div>
+                      <div
+                        class="absolute bottom-[22px] left-0 right-0 text-center transition-transform duration-300"
+                      >
+                        <span
+                          class="font-['Saira',Helvetica] font-semibold text-white text-xl md:text-[28px] tracking-[0.28px] leading-[44.8px] drop-shadow-lg"
+                          >Bed</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="product-card rounded-xl border bg-card text-card-foreground shadow-lg h-[300px] md:h-[400px] relative overflow-hidden cursor-pointer"
+                >
+                  <div class="p-0 h-full">
+                    <div
+                      class="product-image w-full h-full bg-cover bg-center"
+                      style="
+                        background-image: url('./assets/imgs/sanibell-bv-g01h0wty22s-unsplash.png');
+                      "
+                    >
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100"
+                      ></div>
+                      <div
+                        class="absolute bottom-[22px] left-0 right-0 text-center transition-transform duration-300"
+                      >
+                        <span
+                          class="font-['Saira',Helvetica] font-semibold text-white text-xl md:text-[28px] tracking-[0.28px] leading-[44.8px] drop-shadow-lg"
+                          >Cupboard</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="product-card rounded-xl border bg-card text-card-foreground shadow-lg h-[300px] md:h-[400px] relative overflow-hidden cursor-pointer"
+                >
+                  <div class="p-0 h-full">
+                    <img
+                      class="product-image w-full h-full object-cover"
+                      alt="Lighting"
+                      src="./assets/imgs/jean-philippe-delberghe-ry9wbo3qmoc-unsplash.png"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100"
+                    ></div>
+                    <div
+                      class="absolute bottom-[22px] left-0 right-0 text-center transition-transform duration-300"
+                    >
+                      <span
+                        class="font-['Saira',Helvetica] font-semibold text-white text-xl md:text-[28px] tracking-[0.28px] leading-[44.8px] drop-shadow-lg"
+                        >Lighting</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-center md:justify-start gap-2.5 cursor-pointer group"
+              >
+                <span
+                  class="font-['Saira',Helvetica] font-medium text-[#23262f] text-base tracking-[0.16px] leading-[25.6px] underline group-hover:text-[#286f6c] transition-colors duration-300"
+                  >Check All</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right w-[22px] h-[14.73px] text-[#23262f] group-hover:text-[#286f6c] transition-all duration-300 group-hover:translate-x-1"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </section>
+          <section class="w-full py-12 sm:py-16 md:py-20 bg-white">
+            <div class="w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+              <div
+                class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
+              >
+                <div
+                  class="w-full md:w-1/2 max-w-[570px] text-center md:text-left"
+                >
+                  <h2
+                    class="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-semibold leading-tight sm:leading-[1.3] md:leading-[52px] text-[#23262f] font-['Saira',Helvetica] mb-4 sm:mb-6"
+                  >
+                    The Best Furniture Manufacturer Of Your Choice
+                  </h2>
+                  <p
+                    class="text-base sm:text-lg md:text-xl font-normal leading-relaxed sm:leading-[1.6] md:leading-[34px] text-[#23262f] font-['Saira',Helvetica]"
+                  >
+                    Furniture power is a software as services for multipurpose
+                    business management system, especially for them who are
+                    running two or more business explore the future Furniture
+                    power is a software as services
+                  </p>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                  <img
+                    class="w-full max-w-[554px] h-auto object-cover rounded-lg"
+                    alt="Modern furniture in a bright kitchen setting"
+                    src="./assets/imgs/insert-image-here-1.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="products" class="w-full py-16 px-4">
+            <div class="max-w-[1240px] mx-auto">
+              <div class="flex flex-col items-center justify-center mb-16">
+                <h2
+                  class="slide-down font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl md:text-[40px] leading-[1.4] md:leading-[55px] mb-4"
+                >
+                  All Product
+                </h2>
+                <p
+                  class="slide-up font-['Saira',Helvetica] font-normal text-[#23262f] text-sm md:text-base text-center leading-[1.6] md:leading-[26.4px] max-w-[543px]"
+                  style="animation-delay: 0.3s; animation-fill-mode: both"
+                >
+                  The products we provide only for you as our service are
+                  selected from the best products with number 1 quality in the
+                  world
+                </p>
+              </div>
+              <div
+                id="products-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in transition-all duration-500"
+                style="animation-delay: 0.6s; animation-fill-mode: both"
+              >
+                <div
+                  class="flex flex-col h-auto md:h-[380px] product-card group"
+                >
+                  <div
+                    class="bg-card text-card-foreground shadow-lg w-full h-[250px] md:h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative transition-all duration-300"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="product-image w-full h-full object-cover"
+                        alt="Ceiling Light"
+                        src="./assets/imgs/llight-1-7.png"
+                      />
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                      ></div>
+                      <button
+                        class="btn-hover inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow absolute bottom-4 md:bottom-6 right-4 md:right-6 w-[35px] h-[35px] md:w-[40px] md:h-[40px] rounded-full bg-white hover:bg-[#286f6c] p-0 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-5 w-5 md:h-6 md:w-6 text-[#23262f] group-hover:text-white transition-colors duration-300"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-lg md:text-2xl leading-[1.3] md:leading-[31.2px] group-hover:text-[#286f6c] transition-colors duration-300"
+                  >
+                    Ceiling Light
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-semibold text-[#286f6c] text-lg md:text-xl leading-[26.4px]"
+                      >$75.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$82.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Wood Chair"
+                        src="./assets/imgs/llight-1-5.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Wood Chair
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$50.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$70.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Papper Cupboard"
+                        src="./assets/imgs/llight-1-6.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Papper Cupboard
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$105.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$120.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Ole Gundorse Spring..."
+                        src="./assets/imgs/llight-1-7.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Ole Gundorse Spring...
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$82.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$100.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Treos Seroes 911"
+                        src="./assets/imgs/llight-1-1.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Treos Seroes 911
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$200.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$210.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Multi Bilderman Slibber..."
+                        src="./assets/imgs/llight-1-3.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Multi Bilderman Slibber...
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$45.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$50.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Xora Corner Desk"
+                        src="./assets/imgs/llight-1-2.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Xora Corner Desk
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$320.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$325.00</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col h-[380px]">
+                  <div
+                    class="bg-card text-card-foreground shadow w-full h-[300px] rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative"
+                  >
+                    <div class="p-0 h-full">
+                      <img
+                        class="w-full h-full object-cover"
+                        alt="Black Forest Series Wo..."
+                        src="./assets/imgs/llight-1-4.png"
+                      /><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus h-6 w-6"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <h3
+                    class="mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]"
+                  >
+                    Black Forest Series Wo...
+                  </h3>
+                  <div class="flex items-center mt-2">
+                    <span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]"
+                      >$225.00</span
+                    ><span
+                      class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through"
+                      >$240.00</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center gap-[30px] mt-16">
+                <button
+                  id="prev-btn"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground w-[50px] h-[50px] rounded-full shadow-[0px_4px_10px_#0f1b3305] btn-hover"
+                  onclick="changePage(-1)"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-left h-6 w-6"
+                  >
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <div
+                  id="pagination-dots"
+                  class="flex items-center gap-[15px]"
+                ></div>
+                <button
+                  id="next-btn"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground w-[50px] h-[50px] rounded-full shadow-[0px_4px_10px_#0f1b330d] btn-hover"
+                  onclick="changePage(1)"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right h-6 w-6"
+                  >
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section
+            class="relative w-full py-12 sm:py-16 md:py-20 max-w-[1440px] mx-auto"
+          >
+            <div
+              class="flex flex-col lg:flex-row items-start justify-between px-4 sm:px-6 md:px-8 lg:px-[100px] gap-8 lg:gap-12"
+            >
+              <div class="flex flex-col max-w-[570px] w-full">
+                <h2
+                  class="font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-[1.3] md:leading-[52px] mb-6 sm:mb-8 text-center lg:text-left"
+                >
+                  What People Are Saying About Us
+                </h2>
+                <div
+                  class="flex items-center gap-4 sm:gap-5 mb-6 sm:mb-8 justify-center lg:justify-start"
+                >
+                  <span
+                    class="relative flex shrink-0 overflow-hidden rounded-full w-16 h-16 sm:w-20 sm:h-20"
+                    ><img
+                      class="aspect-square h-full w-full object-cover"
+                      alt="Josh Smith"
+                      src="./assets/imgs/ellipse-202.svg"
+                  /></span>
+                  <div class="flex flex-col gap-2 sm:gap-3">
+                    <span
+                      class="font-['Saira',Helvetica] font-semibold text-[#23262f] text-lg sm:text-xl leading-tight"
+                      >Josh Smith</span
+                    ><span
+                      class="font-['Saira',Helvetica] font-normal text-[#23262f] text-xs sm:text-sm leading-tight opacity-50"
+                      >Manager of The New York Times</span
+                    >
+                  </div>
+                </div>
+                <p
+                  class="font-['Saira',Helvetica] font-normal text-[#23262f] text-base sm:text-lg md:text-xl leading-relaxed sm:leading-[1.6] md:leading-[34px] mb-6 sm:mb-8 text-center lg:text-left"
+                >
+                  "They have a perfect touch for making something so
+                  professional, interesting and useful for a lot of people."
+                </p>
+                <div
+                  class="flex gap-4 sm:gap-6 justify-center lg:justify-start"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:bg-accent hover:text-accent-foreground w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] rounded-full bg-white shadow-[0px_4px_10px_#0f1b330d]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right w-5 h-5 sm:w-6 sm:h-6 transform rotate-180"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button
+                  ><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground hover:bg-primary/90 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] rounded-full bg-[#286f6c] shadow-[0px_4px_10px_#0f1b330d]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right w-5 h-5 sm:w-6 sm:h-6"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="relative w-full lg:w-auto flex justify-center">
+                <img
+                  class="w-full max-w-[562px] h-auto sm:h-[250px] md:h-[300px] lg:h-[340px] object-cover rounded-lg"
+                  alt="Interior showcase"
+                  src="./assets/imgs/rectangle-925.svg"
+                />
+              </div>
+            </div>
+          </section>
+          <section
+            id="contact"
+            class="relative w-full py-12 sm:py-16 md:py-24 bg-[url(./assets/imgs/rectangle-928.svg)] bg-cover bg-center parallax-bg"
+          >
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div
+              class="container relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6"
+            >
+              <div class="w-full md:w-1/2 md:ml-auto max-w-lg">
+                <div class="mb-6 sm:mb-8 text-center md:text-left">
+                  <h2
+                    class="slide-down font-['Saira',Helvetica] font-semibold text-white text-2xl sm:text-3xl md:text-4xl leading-tight sm:leading-[1.3] md:leading-[54px] mb-4 sm:mb-6"
+                  >
+                    Get more discount <br class="hidden sm:block" />Off your
+                    order
+                  </h2>
+                  <p
+                    class="slide-up font-['Saira',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl leading-relaxed"
+                    style="animation-delay: 0.3s; animation-fill-mode: both"
+                  >
+                    Join our mailing list
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 bounce-in"
+                  style="animation-delay: 0.6s; animation-fill-mode: both"
+                >
+                  <div class="flex-grow">
+                    <input
+                      class="flex w-full border border-input py-1 shadow-sm transition-all duration-300 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#286f6c] disabled:cursor-not-allowed disabled:opacity-50 h-[48px] sm:h-[50px] md:h-[60px] bg-white rounded-lg px-4 sm:px-5 md:px-6 text-sm sm:text-base hover:shadow-lg focus:shadow-lg"
+                      placeholder="Your email address"
+                      type="email"
+                    />
+                  </div>
+                  <button
+                    class="btn-hover inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow py-2 h-[48px] sm:h-[50px] md:h-[60px] bg-[#286f6c] hover:bg-[#1f5a57] rounded-lg px-5 sm:px-6 md:px-7 font-['Saira',Helvetica] font-semibold text-white text-base sm:text-lg md:text-xl"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="w-full bg-[#23262f] py-12 md:py-16">
+            <div class="container mx-auto px-4 md:px-6">
+              <div
+                class="flex flex-col md:flex-row justify-between items-center md:items-start mb-8"
+              >
+                <div class="mb-6 md:mb-0">
+                  <h2
+                    class="font-['Raleway',Helvetica] font-bold text-white text-2xl md:text-3xl tracking-[0.08px] slide-down"
+                  >
+                    FurniShop
+                  </h2>
+                </div>
+                <div class="flex space-x-3 md:space-x-4">
+                  <div
+                    class="scale-hover w-10 h-10 md:w-12 md:h-12 bg-[#6d5dd31a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#286f6c] hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-instagram text-white hover:text-white transition-colors duration-300"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        x="2"
+                        y="2"
+                        rx="5"
+                        ry="5"
+                      ></rect>
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      ></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                  </div>
+                  <div
+                    class="scale-hover w-10 h-10 md:w-12 md:h-12 bg-[#6d5dd31a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#286f6c] hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-facebook text-white hover:text-white transition-colors duration-300"
+                    >
+                      <path
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="scale-hover w-10 h-10 md:w-12 md:h-12 bg-[#6d5dd31a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#286f6c] hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-twitter text-white hover:text-white transition-colors duration-300"
+                    >
+                      <path
+                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="scale-hover w-10 h-10 md:w-12 md:h-12 bg-[#6d5dd31a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#286f6c] hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-github text-white hover:text-white transition-colors duration-300"
+                    >
+                      <path
+                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                      ></path>
+                      <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="scale-hover w-10 h-10 md:w-12 md:h-12 bg-[#6d5dd31a] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#286f6c] hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-linkedin text-white hover:text-white transition-colors duration-300"
+                    >
+                      <path d="m16 8 6-6v6h-6z"></path>
+                      <path d="M16 8 8 16 2 10l6-6 8 8z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-orientation="horizontal"
+                role="none"
+                class="shrink-0 h-[1px] w-full my-8 bg-[#eaedf3]"
+              ></div>
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
+              >
+                <div class="flex flex-col space-y-3 md:space-y-4">
+                  <h3
+                    class="font-['Raleway',Helvetica] font-medium text-white text-base md:text-lg"
+                  >
+                    Our Products
+                  </h3>
+                  <ul class="space-y-2 md:space-y-4">
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-gray-300 text-sm leading-5 hover:text-white transition-colors duration-300 cursor-pointer"
+                    >
+                      The Support Suite
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-gray-300 text-sm leading-5 hover:text-white transition-colors duration-300 cursor-pointer"
+                    >
+                      The Sales Suite
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-gray-300 text-sm leading-5 hover:text-white transition-colors duration-300 cursor-pointer"
+                    >
+                      Support
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-gray-300 text-sm leading-5 hover:text-white transition-colors duration-300 cursor-pointer"
+                    >
+                      Guide
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-4">
+                  <h3
+                    class="font-['Raleway',Helvetica] font-medium text-white text-lg"
+                  >
+                    Top Features
+                  </h3>
+                  <ul class="space-y-4">
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Ticketing System
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Knowledge Base
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Community Forums
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Help Desk Software
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-4">
+                  <h3
+                    class="font-['Raleway',Helvetica] font-medium text-white text-lg"
+                  >
+                    Resources
+                  </h3>
+                  <ul class="space-y-4">
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Product Support
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Request Demo
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Library
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Peoplepower Blog
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-4">
+                  <h3
+                    class="font-['Raleway',Helvetica] font-medium text-white text-lg"
+                  >
+                    Company
+                  </h3>
+                  <ul class="space-y-4">
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      About Us
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Press
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Investors
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      Events
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-4">
+                  <h3
+                    class="font-['Raleway',Helvetica] font-medium text-white text-lg"
+                  >
+                    Favourite Things
+                  </h3>
+                  <ul class="space-y-4">
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      For Enterprise
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      For Startups
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      For Benchmark
+                    </li>
+                    <li
+                      class="font-['Inter',Helvetica] font-normal text-white text-sm leading-5"
+                    >
+                      For Small Business
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-full mt-16 py-5">
+              <p
+                class="font-['Inter',Helvetica] font-normal text-white text-sm text-center"
+              >
+                © NameBrand 2022 - All Rights Reserved
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/index.tsx"></script>
+    <script>
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        } else {
+          mobileMenu.classList.add("active");
+          hamburger.classList.add("active");
+        }
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for scroll animations
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(
+          ".slide-up, .slide-down, .fade-in, .bounce-in"
+        );
+        animatedElements.forEach((el) => {
+          observer.observe(el);
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (
+          !mobileMenu.contains(event.target) &&
+          !hamburger.contains(event.target)
+        ) {
+          mobileMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }
+      });
+
+      // Add parallax effect to hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const heroSection = document.querySelector("section");
+        if (heroSection) {
+          heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+
+      // Products pagination functionality
+      const productsData = [
+        {
+          name: "Ceiling Light",
+          price: "$75.00",
+          originalPrice: "$82.00",
+          image: "./assets/imgs/llight-1-7.png",
+          alt: "Ceiling Light",
+        },
+        {
+          name: "Wood Chair",
+          price: "$50.00",
+          originalPrice: "$70.00",
+          image: "./assets/imgs/llight-1-5.png",
+          alt: "Wood Chair",
+        },
+        {
+          name: "Papper Cupboard",
+          price: "$105.00",
+          originalPrice: "$120.00",
+          image: "./assets/imgs/llight-1-6.png",
+          alt: "Papper Cupboard",
+        },
+        {
+          name: "Ole Gundorse Spring...",
+          price: "$82.00",
+          originalPrice: "$100.00",
+          image: "./assets/imgs/llight-1-7.png",
+          alt: "Ole Gundorse Spring...",
+        },
+        {
+          name: "Treos Seroes 911",
+          price: "$200.00",
+          originalPrice: "$210.00",
+          image: "./assets/imgs/llight-1-1.png",
+          alt: "Treos Seroes 911",
+        },
+        {
+          name: "Multi Bilderman Slibber...",
+          price: "$45.00",
+          originalPrice: "$50.00",
+          image: "./assets/imgs/llight-1-3.png",
+          alt: "Multi Bilderman Slibber...",
+        },
+        {
+          name: "Xora Corner Desk",
+          price: "$320.00",
+          originalPrice: "$325.00",
+          image: "./assets/imgs/llight-1-2.png",
+          alt: "Xora Corner Desk",
+        },
+        {
+          name: "Black Forest Series Wo...",
+          price: "$225.00",
+          originalPrice: "$240.00",
+          image: "./assets/imgs/llight-1-4.png",
+          alt: "Black Forest Series Wo...",
+        },
+        {
+          name: "Modern Sofa Set",
+          price: "$450.00",
+          originalPrice: "$500.00",
+          image: "./assets/imgs/llight-1-1.png",
+          alt: "Modern Sofa Set",
+        },
+        {
+          name: "Dining Table",
+          price: "$380.00",
+          originalPrice: "$420.00",
+          image: "./assets/imgs/llight-1-2.png",
+          alt: "Dining Table",
+        },
+        {
+          name: "Bookshelf Unit",
+          price: "$150.00",
+          originalPrice: "$180.00",
+          image: "./assets/imgs/llight-1-3.png",
+          alt: "Bookshelf Unit",
+        },
+        {
+          name: "Office Chair",
+          price: "$180.00",
+          originalPrice: "$220.00",
+          image: "./assets/imgs/llight-1-4.png",
+          alt: "Office Chair",
+        },
+      ];
+
+      let currentPage = 0;
+      const itemsPerPage = 8;
+      const totalPages = Math.ceil(productsData.length / itemsPerPage);
+
+      function createProductCard(product, index) {
+        const isFirstCard = index === 0;
+        const cardClass = isFirstCard
+          ? "flex flex-col h-auto md:h-[380px] product-card group"
+          : "flex flex-col h-[380px] product-card group";
+
+        const buttonClass = isFirstCard
+          ? "btn-hover inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground shadow absolute bottom-4 md:bottom-6 right-4 md:right-6 w-[35px] h-[35px] md:w-[40px] md:h-[40px] rounded-full bg-white hover:bg-[#286f6c] p-0 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+          : "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 absolute bottom-6 right-6 w-[30px] h-[30px] rounded-full bg-[#d9d9d9] p-0";
+
+        const iconClass = isFirstCard
+          ? "lucide lucide-plus h-5 w-5 md:h-6 md:w-6 text-[#23262f] group-hover:text-white transition-colors duration-300"
+          : "lucide lucide-plus h-6 w-6";
+
+        const shadowClass = isFirstCard ? "shadow-lg" : "shadow";
+        const heightClass = isFirstCard
+          ? "h-[250px] md:h-[300px]"
+          : "h-[300px]";
+        const titleClass = isFirstCard
+          ? "mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-lg md:text-2xl leading-[1.3] md:leading-[31.2px] group-hover:text-[#286f6c] transition-colors duration-300"
+          : "mt-3 font-['Saira',Helvetica] font-semibold text-[#23262f] text-2xl leading-[31.2px]";
+
+        const priceClass = isFirstCard
+          ? "font-['Saira',Helvetica] font-semibold text-[#286f6c] text-lg md:text-xl leading-[26.4px]"
+          : "font-['Saira',Helvetica] font-normal text-[#23262f] text-base leading-[26.4px]";
+
+        const overlayClass = isFirstCard
+          ? "absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          : "";
+
+        return `
+          <div class="${cardClass} rounded-lg p-2">
+            <div class="bg-card text-card-foreground ${shadowClass} w-full ${heightClass} rounded-2xl border border-solid border-[#1026371a] overflow-hidden relative transition-all duration-300">
+              <div class="p-0 h-full">
+                <img class="product-image w-full h-full object-cover" alt="${
+                  product.alt
+                }" src="${product.image}" />
+                ${overlayClass ? `<div class="${overlayClass}"></div>` : ""}
+                <button class="${buttonClass}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${iconClass}">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h3 class="${titleClass}">${product.name}</h3>
+            <div class="flex items-center mt-2">
+              <span class="${priceClass}">${product.price}</span>
+              <span class="ml-4 opacity-50 font-['Saira',Helvetica] font-normal text-[#23262f] text-sm leading-[23.1px] line-through">${
+                product.originalPrice
+              }</span>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderProducts() {
+        const container = document.getElementById("products-container");
+        const startIndex = currentPage * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentProducts = productsData.slice(startIndex, endIndex);
+
+        container.innerHTML = currentProducts
+          .map((product, index) => createProductCard(product, index))
+          .join("");
+      }
+
+      function renderPagination() {
+        const dotsContainer = document.getElementById("pagination-dots");
+        dotsContainer.innerHTML = "";
+
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement("div");
+          dot.className =
+            i === currentPage
+              ? "w-2.5 h-2.5 rounded-[5px] bg-[#23262f] cursor-pointer transition-all duration-300"
+              : "w-2.5 h-2.5 rounded-[5px] border border-solid border-[#23262f] cursor-pointer transition-all duration-300 hover:bg-[#23262f]/20";
+          dot.onclick = () => goToPage(i);
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateButtons() {
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+
+        if (currentPage === 0) {
+          prevBtn.classList.add("opacity-50", "cursor-not-allowed");
+          prevBtn.disabled = true;
+        } else {
+          prevBtn.classList.remove("opacity-50", "cursor-not-allowed");
+          prevBtn.disabled = false;
+        }
+
+        if (currentPage === totalPages - 1) {
+          nextBtn.classList.add("opacity-50", "cursor-not-allowed");
+          nextBtn.disabled = true;
+        } else {
+          nextBtn.classList.remove("opacity-50", "cursor-not-allowed");
+          nextBtn.disabled = false;
+        }
+      }
+
+      function changePage(direction) {
+        const newPage = currentPage + direction;
+        if (newPage >= 0 && newPage < totalPages) {
+          currentPage = newPage;
+          renderProducts();
+          renderPagination();
+          updateButtons();
+        }
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        renderProducts();
+        renderPagination();
+        updateButtons();
+      }
+
+      // Initialize products when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProducts();
+        renderPagination();
+        updateButtons();
+      });
+    </script>
+
+    <div id="toast" class="toast">Element picked!</div>
+    <div class="__ruler_EXT_MAIN" style="display: none">
+      <div class="__rulerX __ruler_EXT">
+        <ul class="__ruler_X">
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+        </ul>
+      </div>
+      <div class="__rulerY __ruler_EXT">
+        <ul class="__ruler_Y">
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+          <li style="box-sizing: initial"></li>
+        </ul>
+      </div>
+    </div>
+    <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
+      <div id="shadow-host-companion"></div>
+    </div>
+    <style>
+      html,
+      :root,
+      .aiinhbfoop.light,
+      :host([class="light"]) {
+        --aiinhbfoop-main-color: 0, 102, 255;
+      }
+      .aiinhbfoop.dark,
+      :host([class="dark"]) {
+        --aiinhbfoop-main-color: 0, 102, 255;
+      }
+    </style>
+  </body>
+</html>
